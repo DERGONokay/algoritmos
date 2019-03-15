@@ -17,22 +17,27 @@ public class BinarySearch {
 		max = arr.length;
 		pivot = arr.length / 2;
 		
+		//Mientras no encuentre el elemento
 		while(!encontrado) {
 			element = arr[pivot];
+			
+			//caso base
 			if(element == n) {
 				encontrado = true;
 				ret = pivot;
 				break;
 			}
 			
+			//Si no encuentra el elemento y la busqueda se va por fuera de los limites del array
 			if(pivot <= 0 || pivot >= arr.length - 1) {
 				break;
 			}
 			
-			if(n < pivot) {
+			//acorto el rango de busqueda
+			if(n < pivot) {//mitad abajo
 				max = pivot;
 				pivot = pivot /2;
-			} else {
+			} else {// mitad arriba
 				min = pivot;
 				pivot = pivot + ((max - min) /2);
 			}
