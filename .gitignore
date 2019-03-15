@@ -1,0 +1,5 @@
+.metadata/
+.recommenders/
+
+Algoritmos/bin/*
+Algoritmos/.classpath
